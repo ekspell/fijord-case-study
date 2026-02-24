@@ -17,6 +17,7 @@
     :root {
       --bg: #FAFAF8;
       --bg-card: #FFFFFF;
+      --bg-dark: #1A1A1A;
       --text: #1A1A1A;
       --text-secondary: #555555;
       --text-muted: #888888;
@@ -78,9 +79,14 @@
 
     /* Hero */
     .hero {
-      padding: 160px 48px 80px;
-      max-width: 900px;
+      padding: 140px 48px 60px;
+      max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin-bottom: 48px;
     }
 
     .hero-label {
@@ -105,6 +111,99 @@
       color: var(--text-secondary);
       max-width: 600px;
       line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #2E472E;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Hero image with browser frame */
+    .hero-image {
+      margin-top: 48px;
+    }
+
+    .browser-frame {
+      background: var(--bg-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #2D2D2D;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .browser-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .browser-dot.red { background: #FF5F57; }
+    .browser-dot.yellow { background: #FFBD2E; }
+    .browser-dot.green { background: #28CA41; }
+
+    .browser-url {
+      flex: 1;
+      margin-left: 12px;
+      padding: 6px 12px;
+      background: #1A1A1A;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .browser-frame img {
+      width: 100%;
+      display: block;
     }
 
     /* Meta bar */
@@ -199,6 +298,194 @@
       margin-bottom: 8px;
     }
 
+    /* Metrics section */
+    .metrics-section {
+      max-width: 900px;
+      margin: 64px auto;
+      padding: 0 48px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 36px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* Screenshot with browser frame */
+    .screenshot-section {
+      max-width: 1100px;
+      margin: 48px auto;
+      padding: 0 48px;
+    }
+
+    .screenshot-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .screenshot-frame {
+      background: var(--bg-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .screenshot-frame .browser-bar {
+      padding: 10px 14px;
+    }
+
+    .screenshot-frame .browser-dot {
+      width: 10px;
+      height: 10px;
+    }
+
+    .screenshot-frame img {
+      width: 100%;
+      display: block;
+    }
+
+    .screenshot-caption {
+      padding: 16px 20px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* Flow diagram */
+    .flow-section {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 48px;
+    }
+
+    .flow-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flow-box {
+      padding: 12px 20px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .flow-arrow {
+      color: var(--text-muted);
+      font-size: 20px;
+    }
+
+    /* Before/After section */
+    .iteration-section {
+      max-width: 1100px;
+      margin: 64px auto;
+      padding: 0 48px;
+    }
+
+    .iteration-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .iteration-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .iteration-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .iteration-badge {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .iteration-badge.before {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+
+    .iteration-badge.after {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .iteration-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .iteration-content {
+      padding: 20px;
+    }
+
+    .iteration-content p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .iteration-image {
+      border-top: 1px solid var(--border);
+    }
+
+    .iteration-image img {
+      width: 100%;
+      display: block;
+    }
+
     /* Prototype embed */
     .prototype-section {
       max-width: 1100px;
@@ -249,54 +536,6 @@
       color: var(--text-secondary);
     }
 
-    /* Table */
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 32px 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 15px;
-    }
-
-    th {
-      text-align: left;
-      padding: 12px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    td {
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-    }
-
-    /* Code block */
-    .code-block {
-      background: #1a1a1a;
-      color: #e5e5e5;
-      padding: 20px 24px;
-      border-radius: 8px;
-      font-family: 'SF Mono', Monaco, monospace;
-      font-size: 14px;
-      line-height: 1.6;
-      overflow-x: auto;
-      margin: 24px 0;
-    }
-
-    .code-block .comment {
-      color: #6a6a6a;
-    }
-
-    .code-block .accent {
-      color: #7dd3a0;
-    }
-
     /* Decision card */
     .decision-card {
       background: var(--bg-card);
@@ -323,41 +562,6 @@
     .decision-card p {
       margin-bottom: 0;
       font-size: 15px;
-    }
-
-    /* Color palette */
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
-      margin: 24px 0;
-    }
-
-    .color-swatch {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .color-swatch-preview {
-      height: 60px;
-    }
-
-    .color-swatch-info {
-      padding: 10px 12px;
-    }
-
-    .color-swatch-name {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-
-    .color-swatch-value {
-      font-size: 12px;
-      color: var(--text-muted);
-      font-family: 'SF Mono', Monaco, monospace;
     }
 
     /* Outcomes */
@@ -387,23 +591,27 @@
       margin: 0;
     }
 
-    /* Footer */
-    footer {
+    /* Contact section */
+    .contact-section {
       max-width: 700px;
-      margin: 120px auto 0;
-      padding: 48px;
-      border-top: 1px solid var(--border);
+      margin: 120px auto 80px;
+      padding: 0 48px;
       text-align: center;
     }
 
-    footer p {
-      color: var(--text-muted);
-      font-size: 14px;
+    .contact-section h2 {
+      margin-top: 0;
     }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
+    .contact-section p {
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
     }
 
     /* Responsive */
@@ -420,6 +628,10 @@
         font-size: 36px;
       }
 
+      .hero-actions {
+        flex-direction: column;
+      }
+
       .meta-bar {
         flex-wrap: wrap;
         gap: 24px;
@@ -430,8 +642,20 @@
         padding: 0 24px;
       }
 
-      .prototype-section {
+      .screenshot-section,
+      .prototype-section,
+      .flow-section,
+      .metrics-section,
+      .iteration-section {
         padding: 0 24px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .iteration-grid {
+        grid-template-columns: 1fr;
       }
 
       .prototype-frame iframe {
@@ -441,30 +665,71 @@
       .outcomes-grid {
         grid-template-columns: 1fr;
       }
+
+      .flow-diagram {
+        flex-direction: column;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+
+      .contact-section {
+        padding: 0 24px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#" class="nav-logo">Portfolio</a>
+    <a href="#" class="nav-logo">Fijord</a>
     <div class="nav-links">
-      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
       <a href="#process">Process</a>
-      <a href="#designs">Designs</a>
       <a href="#outcomes">Outcomes</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <header class="hero">
-    <p class="hero-label">Case Study</p>
-    <h1 class="hero-title">Fijord: From Meeting Chaos to Shipped Tickets</h1>
-    <p class="hero-subtitle">Designing an AI-powered product management tool that transforms discovery calls into evidence-backed work items.</p>
+    <div class="hero-content">
+      <p class="hero-label">Case Study</p>
+      <h1 class="hero-title">Fijord: From Meeting Chaos to Shipped Tickets</h1>
+      <p class="hero-subtitle">Designing an AI-powered product management tool that transforms discovery calls into evidence-backed work items.</p>
+      <div class="hero-actions">
+        <a href="https://fijord.app" target="_blank" class="btn btn-primary">
+          <svg class="btn-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+          View Live Product
+        </a>
+        <a href="#solution" class="btn btn-secondary">See the Work</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+          </div>
+          <div class="browser-url">fijord.app</div>
+        </div>
+        <img src="img-01-scope.png" alt="Fijord scope view showing evidence, problems, and tickets">
+      </div>
+    </div>
   </header>
 
   <div class="meta-bar">
     <div class="meta-item">
       <span class="meta-label">Role</span>
-      <span class="meta-value">Senior Product Designer & Design Engineer</span>
+      <span class="meta-value">Product Designer & Design Engineer</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Timeline</span>
@@ -476,182 +741,227 @@
     </div>
   </div>
 
-  <section id="overview" class="content">
+  <section id="problem" class="content">
     <h2>The Problem</h2>
-    <p>Product managers, designers, and researchers spend hours after every user interview doing the same tedious work: re-watching recordings, copying quotes into documents, synthesizing findings, and writing tickets manually.</p>
-    <p>The pain is real but fragmented. No single step is unbearable, but the cumulative tax is significant. And critically, <strong>the evidence trail disappears</strong>. By the time a ticket reaches engineering, the original user quote is long gone.</p>
+    <p>Product managers spend hours after every user interview doing the same tedious work: re-watching recordings, copying quotes into documents, synthesizing findings, and writing tickets manually.</p>
+    <p>The real cost isn't the time. It's that <strong>the evidence trail disappears</strong>. By the time a ticket reaches engineering, the original user quote is gone. When someone asks "why are we building this?", nobody can point to the source.</p>
+    <p>I interviewed six product managers ranging from Amazon to early-stage startups. The same pain point emerged across all of them:</p>
 
     <blockquote>
-      <p>"When I wasn't in that meeting... I didn't have full context on why we're even doing this."</p>
+      <p>"When I wasn't in that meeting, I didn't have full context on why we're even doing this."</p>
       <cite>Product Manager, Amazon</cite>
     </blockquote>
-
-    <h2>The Opportunity</h2>
-    <p>I challenged myself early: "This is free with AI. Anyone can paste a transcript into ChatGPT and get tickets."</p>
-    <p>That pushed me to identify what ChatGPT <em>can't</em> do:</p>
-    <ul>
-      <li>Track patterns across 10+ meetings over months</li>
-      <li>Auto-detect "this theme keeps coming up"</li>
-      <li>Maintain persistent links between tickets and original evidence</li>
-      <li>Generate living briefs from accumulated context</li>
-    </ul>
-    <p><strong>Fijord's opportunity:</strong> Be the connective tissue between meetings and tickets, with evidence that compounds over time.</p>
   </section>
+
+  <div class="metrics-section">
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">6</div>
+        <div class="metric-label">PM interviews conducted</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">14s</div>
+        <div class="metric-label">Average processing time</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">12→3</div>
+        <div class="metric-label">Quotes distilled to problems</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="solution" class="content">
+    <h2>The Solution</h2>
+    <p>Fijord processes meeting transcripts and extracts problems backed by evidence, then generates tickets that can be exported directly to Linear or Jira. Every ticket maintains a link back to its source quotes.</p>
+  </section>
+
+  <div class="flow-section">
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <span class="flow-box">Transcript</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="flow-box">Evidence</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="flow-box">Problems</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="flow-box">Tickets</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">
+        <span class="flow-box">Linear / Jira</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 1: Process a Transcript</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app</div>
+      </div>
+      <img src="img-06-process.png" alt="Process transcript interface showing paste area and integration options">
+    </div>
+    <div class="screenshot-caption">Users paste a transcript or connect Fireflies.ai to import directly. The input is intentionally simple: one text area, one button.</div>
+  </div>
+
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 2: Evidence, Problems, and Tickets</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app/scope</div>
+      </div>
+      <img src="img-01-scope.png" alt="Three-column view showing extracted evidence, problems, and suggested tickets">
+    </div>
+    <div class="screenshot-caption">AI processes the transcript in 14 seconds and extracts 12 quotes, 3 problems, and 19 suggested tickets. The three-column layout lets users see the full chain from evidence to action.</div>
+  </div>
 
   <section id="process" class="content">
     <h2>Design Process</h2>
+    <h3>Evidence-First Layout</h3>
+    <p>Early versions showed tickets first. But user testing revealed that PMs didn't trust AI-generated tickets without seeing the source. By leading with evidence (the actual user quotes), users can verify the AI's reasoning before accepting its suggestions.</p>
+    <p>The three-column layout mirrors the thinking process: <strong>What did users say?</strong> → <strong>What problems does that reveal?</strong> → <strong>What should we build?</strong></p>
+  </section>
 
-    <h3>Information Architecture</h3>
-    <p>I mapped the full user journey from raw input to shipped outcome:</p>
-
-    <div class="code-block">
-      <span class="accent">Evidence</span> → <span class="accent">Signals</span> → <span class="accent">Epics</span> → <span class="accent">Tickets</span> → Shipped Work<br>
-      <span class="comment">    ↑                                        |</span><br>
-      <span class="comment">    └──────── Backlinks ────────────────────┘</span>
+  <div class="iteration-section">
+    <div class="iteration-grid">
+      <div class="iteration-card">
+        <div class="iteration-header">
+          <span class="iteration-badge before">Before</span>
+          <span class="iteration-title">Tickets-first approach</span>
+        </div>
+        <div class="iteration-content">
+          <p>Initial design led with AI-generated tickets. Users saw actionable output immediately, but had no way to verify if the tickets were based on real user feedback or hallucinated by the AI.</p>
+        </div>
+      </div>
+      <div class="iteration-card">
+        <div class="iteration-header">
+          <span class="iteration-badge after">After</span>
+          <span class="iteration-title">Evidence-first approach</span>
+        </div>
+        <div class="iteration-content">
+          <p>Reordered to show quotes first, then problems, then tickets. Users can trace every ticket back to a real user quote. Trust increased, and PMs felt confident exporting to their tools.</p>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <p>Key architectural decisions:</p>
-    <ul>
-      <li><strong>Meetings live globally</strong> but feed into multiple Epics. One interview might surface onboarding issues AND pricing confusion.</li>
-      <li><strong>Signals are pre-Epics.</strong> When the AI detects a recurring theme, it surfaces as a Signal. Once strong enough, the user promotes it to an Epic.</li>
-      <li><strong>Epics contain the workflow:</strong> Discovery → Scope → Roadmap → Brief.</li>
-      <li><strong>Backlinks close the loop.</strong> Every exported ticket links back to Fijord showing the full evidence trail.</li>
-    </ul>
-
-    <h3>Protecting the Quick Win</h3>
-    <p>A key tension emerged: building power-user features while preserving the "30-second magic" that hooks new users.</p>
-
-    <div class="decision-card">
-      <h4>Two entry points on the dashboard</h4>
-      <p><strong>"Process a new meeting"</strong> for immediate value. Paste transcript, get tickets.<br>
-      <strong>"Upload to library"</strong> for power users. Feed the Signals engine.</p>
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 3: Trace Back to Source</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app/scope</div>
+      </div>
+      <img src="img-02-transcript.png" alt="Transcript drawer open with highlighted quote">
     </div>
+    <div class="screenshot-caption">Clicking any quote opens the transcript drawer with that moment highlighted. Users can see the full context of what was said, not just an extracted snippet.</div>
+  </div>
 
-    <p>New users experience magic immediately. Over time, they discover the deeper value as patterns emerge.</p>
-
-    <h2>Key Design Decisions</h2>
-
-    <h3>1. Terminology Matters</h3>
-    <p>User testing revealed confusing language:</p>
-    <ul>
-      <li>"Pattern" felt abstract, so I changed it to <strong>"Signal"</strong></li>
-      <li>"Call" felt narrow, so I changed it to <strong>"Meeting"</strong></li>
-      <li>"Patch" confused PMs, so I changed it to <strong>"Solution"</strong></li>
-    </ul>
-
-    <h3>2. Evidence-First Problem Cards</h3>
-    <p>Rather than showing tickets first, I designed problem cards that lead with evidence. The green left border on quotes became a consistent pattern, and users quickly learned to scan for evidence.</p>
-
-    <h3>3. Drawer Pattern for Transcripts</h3>
-    <p>Initially I designed a two-column layout: transcript on left, extracted content on right.</p>
-    <p><strong>Problem:</strong> The transcript dominated attention, but it's not the value. The extraction is.</p>
-
+  <section class="content">
+    <h3>Drawer, Not Column</h3>
+    <p>The transcript could have been a permanent column. But that would make it compete for attention with the extracted content, which is the actual value.</p>
+    
     <div class="decision-card">
       <h4>Transcript lives in a slide-out drawer</h4>
-      <p>Main view focuses entirely on what Fijord extracted. Users can reference the transcript when needed, but it doesn't compete for attention.</p>
-    </div>
-
-    <h3>4. Status Without Color Overload</h3>
-    <p>Initial designs used colored left borders to differentiate Epic statuses. I pushed back:</p>
-    <ul>
-      <li>Multiple colors fragment visual hierarchy</li>
-      <li>Status badges already communicate state</li>
-      <li>Green progress bars should be the only color accent</li>
-    </ul>
-    <p><strong>Final design:</strong> Clean cards with status communicated through badges only.</p>
-  </section>
-
-  <section id="designs" class="prototype-section">
-    <h2 style="max-width: 700px; margin: 0 auto 48px; padding: 0;">Interactive Prototypes</h2>
-
-    <div class="prototype-header">
-      <span class="prototype-title">Epics Page</span>
-      <span class="prototype-hint">Interactive: try hovering on cards</span>
-    </div>
-    <div class="prototype-frame">
-      <iframe src="epics-updated.html" title="Epics page prototype"></iframe>
-      <div class="prototype-caption">Epic cards show progress, status, metrics, and owner at a glance. Status badges use semantic colors while the rest of the UI stays minimal.</div>
+      <p>The main view focuses on what Fijord extracted. The transcript is accessible when needed for verification, but doesn't dominate the interface.</p>
     </div>
   </section>
 
-  <section class="prototype-section">
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 4: Select and Stage</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app/scope</div>
+      </div>
+      <img src="img-03-select.png" alt="Tickets selected with checkboxes, ready to save to staging">
+    </div>
+    <div class="screenshot-caption">Users select which tickets to keep. Not every AI suggestion is right, so selection is explicit. Selected tickets move to a staging area before export.</div>
+  </div>
+
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 5: Organize Before Export</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app/staging</div>
+      </div>
+      <img src="img-04-staging.png" alt="Staging kanban with tickets ready for export to Linear or Jira">
+    </div>
+    <div class="screenshot-caption">The staging area is a simple kanban. Users can prioritize, edit, or remove tickets before sending them to their PM tool. Export buttons for Linear and Jira are always visible.</div>
+  </div>
+
+  <div class="screenshot-section">
+    <p class="screenshot-label">Step 6: Full Evidence Trail</p>
+    <div class="screenshot-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+        </div>
+        <div class="browser-url">fijord.app/staging/FJD-103</div>
+      </div>
+      <img src="img-05-ticket.png" alt="Ticket detail showing problem statement, user quotes, and acceptance criteria">
+    </div>
+    <div class="screenshot-caption">Each ticket preserves its lineage: the original problem, supporting quotes, and auto-generated acceptance criteria. When this exports to Linear, it includes a backlink to Fijord where anyone can see the full context.</div>
+  </div>
+
+  <section class="content">
+    <h3>The Backlink</h3>
+    <p>This is the key insight that makes Fijord more than a transcript parser. Every exported ticket includes a shareable URL back to Fijord. When an engineer asks "why are we building this?", the PM can point them to the evidence.</p>
+    <p>The backlink requires no login. Anyone with the link can see the problem statement, supporting quotes, and original transcript context. Evidence that was trapped in a PM's notes is now accessible to the whole team.</p>
+  </section>
+
+  <section class="content">
+    <h2>Power Features: Signals</h2>
+    <p>Processing one meeting is useful. But the real value emerges over time. Fijord detects patterns across meetings and surfaces them as "Signals" before users even notice the trend.</p>
+    <p>When the same theme appears in multiple meetings, with multiple users saying similar things, that's a signal worth paying attention to. Signals can be promoted to Epics when they're ready for action.</p>
+  </section>
+
+  <div class="prototype-section">
     <div class="prototype-header">
-      <span class="prototype-title">Signal Detail Page</span>
+      <span class="prototype-title">Signal Detail (Prototype)</span>
       <span class="prototype-hint">Interactive: explore the evidence groupings</span>
     </div>
     <div class="prototype-frame">
       <iframe src="signal-detail.html" title="Signal detail prototype"></iframe>
-      <div class="prototype-caption">Signals show strength, evidence quotes grouped by meeting, and a timeline of how the signal emerged. Users can promote strong signals to Epics.</div>
     </div>
-  </section>
-
-  <section class="prototype-section">
-    <div class="prototype-header">
-      <span class="prototype-title">Meeting Detail Page</span>
-      <span class="prototype-hint">Interactive: click "View transcript" to open the drawer</span>
-    </div>
-    <div class="prototype-frame">
-      <iframe src="meeting-detail.html" title="Meeting detail prototype"></iframe>
-      <div class="prototype-caption">Focus on extracted value: problems and connections. Full transcript lives in a drawer, accessible but not dominant.</div>
-    </div>
-  </section>
+    <div class="prototype-caption">Signals show strength (how many meetings mention this theme), all supporting quotes grouped by meeting, and a timeline of how the signal emerged. Users can promote strong signals to Epics when ready to take action.</div>
+  </div>
 
   <section class="content">
-    <h2>Design System</h2>
-    <p>I established a minimal, Linear-inspired design language with warm tones instead of cold grays.</p>
-
-    <h3>Color Palette</h3>
-    <div class="color-grid">
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #FAF9F6;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Background</div>
-          <div class="color-swatch-value">#FAF9F6</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #FFFFFF; border-bottom: 1px solid #E5E5E5;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Card</div>
-          <div class="color-swatch-value">#FFFFFF</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #3D5A3D;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Accent</div>
-          <div class="color-swatch-value">#3D5A3D</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #E8F0E8;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Accent Light</div>
-          <div class="color-swatch-value">#E8F0E8</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #1A1A1A;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Text</div>
-          <div class="color-swatch-value">#1A1A1A</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch-preview" style="background: #6B6B6B;"></div>
-        <div class="color-swatch-info">
-          <div class="color-swatch-name">Text Secondary</div>
-          <div class="color-swatch-value">#6B6B6B</div>
-        </div>
-      </div>
-    </div>
-
-    <h3>Typography</h3>
-    <ul>
-      <li><strong>Font:</strong> DM Sans throughout</li>
-      <li><strong>Weights:</strong> 400 for body, 500 for titles (deliberately lighter than typical)</li>
-      <li><strong>No 600/700</strong> to keep the interface calm and readable</li>
-    </ul>
+    <h3>Why Signals Matter</h3>
+    <p>A single user complaint might be an edge case. But when 5 users across 3 months all mention "onboarding confusion," that's a pattern the team needs to address.</p>
+    <p>Fijord tracks this automatically. No spreadsheet, no manual tagging. Just process your meetings and let the patterns emerge.</p>
   </section>
 
   <section id="outcomes" class="content">
@@ -660,7 +970,7 @@
     <div class="outcomes-grid">
       <div class="outcome-card">
         <h4>Designed & In Development</h4>
-        <p>Full transcript → tickets flow, Linear/Jira integrations, backlinks, dashboard, signals, and epic views</p>
+        <p>Full transcript-to-tickets flow, Linear/Jira integrations, backlinks, and Signals system</p>
       </div>
       <div class="outcome-card">
         <h4>User Validation</h4>
@@ -670,18 +980,29 @@
 
     <h3>What I Learned</h3>
     <ul>
-      <li><strong>Protect speed-to-value.</strong> Power features are the moat, but the quick win is the hook.</li>
-      <li><strong>Evidence > AI magic.</strong> Users don't trust AI summaries alone. Showing source quotes builds confidence.</li>
-      <li><strong>Terminology is UX.</strong> Renaming "Patterns" to "Signals" wasn't cosmetic. It changed how users understood the feature.</li>
+      <li><strong>Evidence before action.</strong> Users don't trust AI outputs without seeing the source. Show the quotes first.</li>
+      <li><strong>Backlinks are the moat.</strong> Anyone can extract text from a transcript. Preserving the evidence trail is what makes this valuable long-term.</li>
       <li><strong>Design engineer velocity.</strong> Being able to implement my own designs cut iteration cycles from days to hours.</li>
     </ul>
+  </section>
 
-    <h3>Next Steps</h3>
-    <ul>
-      <li><strong>Brief tab:</strong> Auto-generated living document synthesizing all evidence for an Epic</li>
-      <li><strong>Feedback system:</strong> In-app collection to guide iteration</li>
-      <li><strong>Team features:</strong> Shared workspaces, role-based views</li>
-    </ul>
+  <section id="contact" class="contact-section">
+    <h2>Let's Chat</h2>
+    <p>I'm looking for product design and design engineering roles where I can ship real products. If you're building something interesting, I'd love to hear about it.</p>
+    <div class="contact-links">
+      <a href="mailto:helloerinkate@gmail.com" class="btn btn-primary">
+        <svg class="btn-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/erin-kate-spellman-ba3225198" target="_blank" class="btn btn-secondary">
+        <svg class="btn-icon" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
   </section>
 </body>
 </html>
